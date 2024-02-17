@@ -348,6 +348,10 @@ func (i *Icon) Size() Size {
 	return i.size96dpi
 }
 
+func (i *Icon) Handle() map[int]win.HICON {
+	return i.dpi2hIcon
+}
+
 // create an Alpha Icon or Cursor from an Image
 // http://support.microsoft.com/kb/318876
 func createAlphaCursorOrIconFromImage(im image.Image, hotspot image.Point, fIcon bool) (win.HICON, error) {
